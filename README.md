@@ -46,15 +46,15 @@ python -m spacy download en_core_web_sm
 
 Install Ollama [here](https://ollama.com/download).
 
-After you make sure it is running, open a terminal and enter this command:
+After you make sure the executable is running, open a terminal and enter this command:
 ```bash
 ollama run deepseek-r1:8b
 ```
-This command will install the model and also run it for the first time. You can stop it with CTRL + D or by typing /bye in the terminal.
+This command will install the model and also run it for the first time. You can stop it with `CTRL + D` or by typing `/bye` in the terminal.
 
-The deepseek-r1:8b model is used in this configuration, but most local LLMs can be used. 
+The `deepseek-r1:8b` model is used in this configuration, but most local LLMs can be used. 
 
-You can find a list of models [here](https://ollama.com/search).
+You can find a list of models [here](https://ollama.com/search). Note that the larger the model, the slower it will run on a regular PC.
 
 ### 4. Generate Embeddings
 ```bash
@@ -74,14 +74,20 @@ python rag_api.py
 ```
 
 ## Tests
-
+You may want to run some tests, which you can do with the following command:
 ```bash
 python -m pytest test_rag_api.py
 ```
+This set of tests contains tests for:
+- A simple question
+- A blank question
+- An unrelated question
+- Multiple questions in one
+- A very long question
 ## Example Usage
-Enter this command in the terminal (the "question" field can be changed for any question)
+Enter this command in the terminal (the "question" field can be changed for any question).
 ```bash
 (Invoke-WebRequest -Method POST http://localhost:5000/ask -Body '{ "question": "When was NVIDIA founded?" }' -ContentType "application/json").Content
 ```
 
-This particular question should generate a response with the year 1993 in it.
+This particular question should generate a response with the year 1993 in it as well as the chunks used as sources.
