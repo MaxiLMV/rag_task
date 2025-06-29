@@ -16,7 +16,7 @@ This project implements a Retrieval-Augmented Generation (RAG) system that answe
 
 3. **Context Retrieval & Answering**  
    When a question is asked:
-   - It’s embedded and compared against the vector DB.
+   - It is embedded and compared against the vector DB.
    - The most relevant chunks are selected.
    - A prompt is built and passed to a local **Ollama** LLM (In this case, `deepseek-r1:8b`).
 
@@ -44,17 +44,17 @@ python -m spacy download en_core_web_sm
 
 ### 3. Install Ollama and LLM
 
-Install Ollama here[{https://ollama.com/download}].
+Install Ollama [here](https://ollama.com/download).
 
-After you make sure it is running, open Powershell and enter this command:
+After you make sure it is running, open a terminal and enter this command:
 ```bash
 ollama run deepseek-r1:8b
 ```
-This command will install the model and also run it for the first time. You can stop with CTRL + D or by typing /bye in the terminal.
+This command will install the model and also run it for the first time. You can stop it with CTRL + D or by typing /bye in the terminal.
 
-The deepseek-r1:8b model is used in this configuration, but any local LLM can be used. 
+The deepseek-r1:8b model is used in this configuration, but most local LLMs can be used. 
 
-You can find a list of model here[{https://ollama.com/search}]
+You can find a list of models [here](https://ollama.com/search).
 
 ### 4. Generate Embeddings
 ```bash
@@ -63,7 +63,7 @@ python generate_embeddings.py
 ## Running the system
 
 ### 1. Start the Ollama server
-Launch the Ollama executable, open Powershell and enter this command:
+Launch the Ollama executable, open a terminal and enter this command:
 ```bash
 ollama run deepseek-r1:8b
 ``` 
