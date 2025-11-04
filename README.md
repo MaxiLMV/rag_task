@@ -1,6 +1,6 @@
-# RAG Task – NVIDIA PDF
+# RAG API
 
-This project implements a Retrieval-Augmented Generation (RAG) system that answers natural language questions based on a financial PDF document from NVIDIA.
+This project implements a Retrieval-Augmented Generation (RAG) system that answers natural language questions based on a PDF document.
 
 ---
 
